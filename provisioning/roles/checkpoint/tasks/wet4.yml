@@ -1,0 +1,49 @@
+---
+# Wet4
+
+# Download Wet4 Theme
+- name: Check out Wet4 theme
+  git: >
+    repo={{ wet4_theme_repo_url }}
+    version={{ wet4_theme_version }}
+    update={{ wet4_theme_keep_updated }}
+    depth=1
+    dest={{ drupal_core_path }}/sites/all/themes/wet4/
+
+# Download Wet4 Menu Module
+- name: Check out Wet4 menu module
+  git: >
+    repo={{ wet4_menu_repo_url }}
+    version={{ wet4_menu_version }}
+    update={{ wet4_menu_keep_updated }}
+    depth=1
+    dest={{ drupal_core_path }}/sites/all/modules/contrib/wet4_menu/
+
+
+# Install the Wet4 theme
+- name: Install Wet4 theme with drush.
+  command: >
+    drush en wet4 -y
+    chdir={{ drupal_core_path }}
+  ignore_errors: yes
+
+# Set the Wet4 theme as default
+- name: Install Wet4 theme with drush.
+  command: >
+    drush vset theme_default wet4 -y
+    chdir={{ drupal_core_path }}
+  ignore_errors: yes
+
+# Disable the default theme
+- name: Disable default theme with drush.
+  command: >
+    drush dis responsive_bartik -y
+    chdir={{ drupal_core_path }}
+  ignore_errors: yes  
+
+# Install the Wet4 modules
+- name: Install Wet4 modules with drush.
+  command: >
+    drush en wet4_menu -y
+    chdir={{ drupal_core_path }}
+  ignore_errors: yes

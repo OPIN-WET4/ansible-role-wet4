@@ -1,0 +1,22 @@
+---
+# Configuration
+
+# Checkpoint Profile
+checkpoint_repo_url: "https://github.com/OPIN-CHECKPOINT/checkpoint.git"
+checkpoint_version: "HEAD"
+checkpoint_keep_updated: no
+
+# Wet4 Theme
+wet4_theme_repo_url: "https://github.com/OPIN-WET4/wet4_theme.git"
+wet4_theme_version: "HEAD"
+wet4_theme_keep_updated: no
+
+# Wet4 Menu
+wet4_menu_repo_url: "https://github.com/OPIN-WET4/wet4_menu.git"
+wet4_menu_version: "HEAD"
+wet4_menu_keep_updated: no
+
+# Wet4 Panel Layouts
+wet4_panel_layouts_repo_url: "https://github.com/OPIN-WET4/wet4_panel_layouts.git"
+wet4_panel_layouts_version: "HEAD"
+wet4_panel_layouts_keep_updated: no
